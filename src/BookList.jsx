@@ -1,37 +1,6 @@
 import Book from "./Book";
-const data1={
-    title:"Atomic Habits",
-    author:"JAMES CLEAR",
-    imgLink:"https://m.media-amazon.com/images/I/81Ls+SBCLiL._SL1500_.jpg",
-    price:454.9,
-};
-const bookData=[{
-  title:"Atomic Habits",
-  author:"JAMES CLEAR",
-  imgLink:"https://m.media-amazon.com/images/I/81Ls+SBCLiL._SL1500_.jpg",
-  price:454.9,
-},{
-  title:"Atomic Habits",
-  author:"JAMES CLEAR",
-  imgLink:"https://m.media-amazon.com/images/I/81Ls+SBCLiL._SL1500_.jpg",
-  price:454.9,
-},{
-  title:"Atomic Habits",
-  author:"JAMES CLEAR",
-  imgLink:"https://m.media-amazon.com/images/I/81Ls+SBCLiL._SL1500_.jpg",
-  price:454.9,
-},{
-  title:"Atomic Habits",
-  author:"JAMES CLEAR",
-  imgLink:"https://m.media-amazon.com/images/I/81Ls+SBCLiL._SL1500_.jpg",
-  price:454.9,
-},{
-  title:"Atomic Habits",
-  author:"JAMES CLEAR",
-  imgLink:"https://m.media-amazon.com/images/I/81Ls+SBCLiL._SL1500_.jpg",
-  price:454.9,
-}];
-const booData = [
+
+const bookData = [
   {
     title: "The Pragmatic Programmer: From Journeyman to Master",
     author: "Andrew Hunt, David Thomas",
@@ -72,11 +41,10 @@ const booData = [
 const BookList=()=>{
 return (
   <div className="booklist">
-     <Book {...booData[0]} />
-     <Book {...booData[1]} />
-     <Book {...booData[2]} />
-     <Book {...booData[3]} />
-     <Book {...booData[4]} />
+     {/* <Book {...bookData[0]} /> */}
+
+    
+     {bookData.map((b)=>(<Book {...b} />))}
 
   </div>
   );
